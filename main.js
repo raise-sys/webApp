@@ -1,15 +1,33 @@
 let text_form = document.getElementById('text_form');
 let output = document.getElementById('output');
+let iRow =1;
 
 text_form.addEventListener('keypress', test_ivent);
 
+window.onload = function(){
+    document.getElementById("text_form").focus();
+    }
 
 function test_ivent(e) {
     if (e.keyCode === 13) {
-      output.innerHTML = text_form.value;
-      text_form.value = '';
-      return false;  
-  }  
+        let table = document.getElementById('targetTable');
+        let newRow = table.insertRow();
+        
+        let newCell = newRow.insertCell();
+        let newText = document.createTextNode(iRow);
+        newCell.appendChild(newText);
+        
+        newCell = newRow.insertCell();
+        newText = document.createTextNode(text_form.value);
+        newCell.appendChild(newText);
+
+        text_form.value = '';
+        iRow = iRow +1;
+
+        window.navigator.vibrate(200);
+
+        return false;  
+    }  
 }
 
 function checkForm($this)
