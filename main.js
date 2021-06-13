@@ -10,3 +10,13 @@ function test_ivent(e) {
       return false;  
   }  
 }
+
+function checkForm($this)
+{
+    var str=$this.value;
+    while(str.match(/[^A-Z^a-z\d\-]/))
+    {
+        str=str.replace(/[^A-Z^a-z\d\-]/,"");
+    }
+    $this.value=str;
+}
