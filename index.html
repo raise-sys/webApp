@@ -13,22 +13,27 @@
   金額：
   <input type="text" id="text_kingaku" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
   （<input type="checkbox" id="chk_yusen" value="1" checked="checked">優先）
-</div>
+  </div>
+  <div>店舗ID：
+    <input type="text" id="text_tempo" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+    棚番：
+    <input type="text" id="text_tanaban" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+    列番：
+    <input type="text" id="text_retsuban" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">  
+  </div>
+  <div>
+    <table border="1" id="targetTable">
+      <thead>
+        <tr>
+          <td></td>
+          <td>INPUTCODE</td>
+        </tr>
+      </thead>
+      <tbody>
+      <tbody>
+    </table>
+  </div>
 
-  <table border="1" id="targetTable">
-    <thead>
-      <tr>
-        <td></td>
-        <td>INPUTCODE</td>
-      </tr>
-    </thead>
-    <tbody>
-    <tbody>
-  </table>
-
-  <p id="output"></p>
-  <p><a class="link" href="https://1-notes.com/javascript-fire-event-of-enter-key/" target="_blank" rel="noopener">https://1-notes.com/javascript-fire-event-of-enter-key/</a></p>
-  
   <script src = "main.js"></script>
 </body>
 </html>
