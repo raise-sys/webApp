@@ -10,47 +10,58 @@ window.onload = function(){
 
 function test_ivent(e) {
     if (e.keyCode === 13) {
-        let table = document.getElementById('targetTable');
-        let newRow = table.insertRow();
-        
-        let newCell = newRow.insertCell();
-        let newText = document.createTextNode(iRow);
-        newCell.appendChild(newText);
-        
-        newCell = newRow.insertCell();
-        newText = document.createTextNode(text_form.value);
-        newCell.appendChild(newText);
+        let strINPUT_CODE = text_form.value;
+        if (strINPUT_CODE === 'Q'){
+            window.navigator.vibrate(200);
+        }else if(strINPUT_CODE === 'q'){
+            window.navigator.vibrate(200);
+        }else{
+            let table = document.getElementById('targetTable');
+            let newRow = table.insertRow();
+            
+            let newCell = newRow.insertCell();
+            let newText = document.createTextNode(iRow);
+            newCell.appendChild(newText);
+            
+            newCell = newRow.insertCell();
+            newText = document.createTextNode(text_form.value);
+            newCell.appendChild(newText);
 
+            newCell = newRow.insertCell();
+            newText = document.createTextNode(text_kingaku.value);
+            newCell.appendChild(newText);
+            iRow = iRow +1;
+        }
         text_form.value = '';
-        iRow = iRow +1;
+
 
 
 // 発言を作成
-const uttr = new SpeechSynthesisUtterance()
+//const uttr = new SpeechSynthesisUtterance()
 
 // 文章 (コンストラクタの引数以外に、この方法でも指定できます)
-uttr.text = "とある山田９７８４８３９９６０２２３"
+//uttr.text = "とある山田９７８４８３９９６０２２３"
 
 // 言語 (日本語:ja-JP, アメリカ英語:en-US, イギリス英語:en-GB, 中国語:zh-CN, 韓国語:ko-KR)
-uttr.lang = "ja-JP"
+//uttr.lang = "ja-JP"
 
 // 速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5)
-uttr.rate = 1.5
+//uttr.rate = 1.5
 
 // 高さ 0-2 初期値:1
-uttr.pitch = 0.5
+//uttr.pitch = 0.5
 
 // 音量 0-1 初期値:1
-uttr.volume = 0.75
+//uttr.volume = 0.75
 
 // 再生 (発言キュー発言に追加)
-speechSynthesis.speak(uttr)
+//speechSynthesis.speak(uttr)
 
 
 
 
 
-        window.navigator.vibrate(200);
+        
 
         return false;  
     }  
