@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>サンプル</title>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "styles.css">
+    <link href="https://www.sedorakuweb.com/checker.css?date=2020_01_23_01" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  </head>
+
+
+
+
+  <body>
+    
+    <!--テーブル生成位置-->
+    <div id ='maintable'></div>
+
+    <script>
+      function getJSON() {
+        var req = new XMLHttpRequest();		  // XMLHttpRequest オブジェクトを生成する
+        req.onreadystatechange = function() {		  // XMLHttpRequest オブジェクトの状態が変化した際に呼び出されるイベントハンドラ
+          if(req.readyState == 4 && req.status == 200){ // サーバーからのレスポンスが完了し、かつ、通信が正常に終了した場合
+            //alert(req.responseText);		          // 取得した JSON ファイルの中身を表示
+
+            document.write(req.responseText);
+
+          }
+        };
+        req.open("GET", "http://www24279ue.sakura.ne.jp/json/json_kotei.php", false); // HTTPメソッドとアクセスするサーバーの　URL　を指定
+        req.send(null);					    // 実際にサーバーへリクエストを送信
+      }
+      
+      getJSON();
+
+    </script>
+
+  </body>
+</html>
