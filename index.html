@@ -8,34 +8,11 @@
   <link rel = "stylesheet" href = "styles.css">
 </head>
 <body>
-  <div>JANCODE：
-  <input type="text" id="text_form" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
+  <div>json送信デモ：
+  <a href="send_json.html">送信デモ</a>
   </div>
-  <div>
-  金額：
-  <input type="text" id="text_kingaku" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
-  （<input type="checkbox" id="chk_yusen" value="1" checked="checked">優先）
+  <div>json受信デモ：
+    <a href="receive_json.html">受信デモ</a>  
   </div>
-  <div>店舗ID：
-    <input type="text" id="text_tempo" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
-    棚番：
-    <input type="text" id="text_tanaban" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">
-    列番：
-    <input type="text" id="text_retsuban" name="num_only" pattern="\d*" onInput="checkForm(this)" oncopy="return false" onpaste="return false" style="ime-mode:disabled">  
-  </div>
-  <div>
-    <table border="1" id="targetTable">
-      <thead>
-        <tr>
-          <td></td>
-          <td>INPUTCODE</td>
-        </tr>
-      </thead>
-      <tbody>
-      <tbody>
-    </table>
-  </div>
-
-  <script src = "main.js"></script>
 </body>
 </html>
